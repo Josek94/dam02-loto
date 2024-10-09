@@ -31,25 +31,5 @@ public class LotoController {
 		
 		return "/loto/genera";
 	}
-	/*
-	@GetMapping({"/loto", "/loto/menu"})
-	public String menuLotoFr(Model model) {
-		model.addAttribute("cabecera", "¡Bienvenidos al menu de Loterias!");
-		model.addAttribute("seleciona", "Selecciona un pais: ");
-		return "/loto/menu";
-	}
 	
-	@GetMapping({"/loto", "/loto/menu"})
-	public String menuLotoGe(Model model) {
-		model.addAttribute("cabecera", "¡Bienvenidos al menu de Loterias!");
-		model.addAttribute("seleciona", "Selecciona un pais: ");
-		return "/loto/menu";
-	}
-	
-	@GetMapping({"/loto", "/loto/menu"})
-	public String menuLotoIt(Model model) {
-		model.addAttribute("cabecera", "¡Bienvenidos al menu de Loterias!");
-		model.addAttribute("seleciona", "Selecciona un pais: ");
-		return "/loto/menu";
-	}*/
 }

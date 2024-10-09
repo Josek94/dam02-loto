@@ -2,8 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title th:text="${titulo}"></title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<title>Lista de libros</title>
 <style type="text/css">
 	body, h1, p {
             margin: 0;
@@ -80,21 +79,69 @@
         background-color: #004b82; /* Azul más oscuro al hacer clic */
         transform: translateY(0); /* Elimina la elevación al hacer clic */
     }
+    
+    /*css tablas */
+    
+            table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+            ul {
+        list-style-type: none; /* Eliminar el estilo de viñetas */
+        padding: 0;
+        margin: 20px auto;
+        width: 80%;
+        background-color: #f9f9f9; /* Fondo similar al de la tabla */
+        border: 1px solid #dddddd; /* Borde suave */
+        border-radius: 5px; /* Bordes redondeados */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    }
+
+    li {
+        padding: 10px 15px;
+        border-bottom: 1px solid #dddddd; /* Línea divisoria entre ítems */
+        text-align: left; /* Alineación similar a la tabla */
+    }
+
+    li:last-child {
+        border-bottom: none; /* Quitar borde al último elemento */
+    }
+
+    li span {
+        font-weight: bold; /* Resaltar el texto para cada ítem */
+        color: #007acc; /* Color azul para resaltar el texto */
+    }
         
 </style>
 </head>
 <body>
 <div class="content-container">
-	<h1 th:text="${cabecera}"></h1>
-	<p th:text="${lorem}"></p>
-	<p th:text="${proverbio}" class="proverbio"></p>
-	<div>
-	<a th:href="@{/loto}"><button class="btn btn-primary">Loto</button></a>
-	<a th:href="@{/libros}"><button class="btn btn-primary">Libros</button></a>
-	<a th:href="@{/imagen}"><button class="btn btn-primary">Imagenes</button></a>
-	</div>
-	
-	
+	<h1 th:text="${titulo}"></h1>
+	<ul>
+		<li><span>ID:</span> <span th:text="${id}"></span></li>
+        <li><span>Título del Libro:</span> <span th:text="${titulolibro}"></span></li>
+        <li><span>Autor:</span> <span th:text="${autor}"></span></li>
+        <li><span>Género:</span> <span th:text="${genero}"></span></li>
+        <li><span>Cantidad de Ejemplares:</span> <span th:text="${cantidadejemplares}"></span></li>
+	</ul>	
+	<a th:href="@{/home}"><button class="btn btn-primary">Volver al menu</button></a>
 </div>	
 </body>
 </html>
