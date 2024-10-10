@@ -121,7 +121,7 @@
         </thead>
         <tbody>
             <tr th:each="libro : ${listaLibros}">
-                <td th:text="${libro.id}"><a th:href="@{/libros/info/'${libro.id}'}"></a></td>
+                <td><a th:text="${libro.id}" th:href="@{/libros/info/{id}(id=${libro.id})}"></a></td>
                 <td th:text="${libro.titulo}"></td>
                 <td th:text="${libro.autor}"></td>
                 <td th:text="${libro.genero}"></td>

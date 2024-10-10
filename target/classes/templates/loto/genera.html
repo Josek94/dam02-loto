@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style type="text/css">
+	body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif; /* Usamos la fuente importada */
+            background-color: #f0f0f0; /* Fondo claro y suave */
+            color: #333; /* Texto en gris oscuro para mejor legibilidad */
+            display: flex;
+            justify-content: center;
+            /*align-items: center;*/
+            min-height: 100vh; /* Asegura que el contenido esté centrado verticalmente */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Estilo para el contenedor principal */
+        .content-container {
+            background-color: #ffffff; /* Fondo blanco para el contenido */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto flotante */
+            padding: 40px;
+            border-radius: 10px; /* Bordes redondeados */
+            /*max-width: 800px; /* Ancho máximo para mejorar la legibilidad */
+            width: 100%;
+           
+            
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #007acc; /* Color azul para el encabezado */
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6; /* Mejoramos el espaciado entre líneas */
+            margin-bottom: 15px;
+        }
+        
+      .proverbio{
+      	font-family: italiaca;
+       	font-weight: bold;
+       	font-style: italic;
+       	
+        }
+        
+       .btn {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        padding: 12px 24px;
+        margin: 10px 5px;
+        border: none;
+        border-radius: 5px; /* Bordes ligeramente redondeados */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    /* Estilo del botón principal */
+    .btn-primary {
+        background-color: #007acc; /* Color azul principal */
+        color: #ffffff; /* Texto blanco para buen contraste */
+    }
+
+    .btn-primary:hover {
+        background-color: #005fa3; /* Oscurece el azul en hover */
+        transform: translateY(-2px); /* Efecto de elevación en hover */
+    }
+
+    .btn-primary:active {
+        background-color: #004b82; /* Azul más oscuro al hacer clic */
+        transform: translateY(0); /* Elimina la elevación al hacer clic */
+    }
+        
+</style>
+</head>
+<body>
+<div class="content-container">
+	<h1 th:text="${cabecera}"></h1>
+	<p th:text="${generaloto}" class="proverbio"></p>
+	
+	<a th:href="@{/home}"><button class="btn btn-primary">Volver al menu</button></a>
+	
+	
+</div>	
+</body>
+</html>

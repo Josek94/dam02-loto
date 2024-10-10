@@ -24,13 +24,21 @@ public class LibroController {
 		return "libro/lista-libro";
 	}
 @GetMapping("libros/info/{id}")
-	public String infoLibro(Model model, @PathVariable int id) {
+	public String infoLibro(Model model, @PathVariable String id) {
+	try {
+		int id1 = Integer.parseInt(id);
 		model.addAttribute("titulo", "informacion del libro:");
-		model.addAttribute("id", libroService.getLibroById(id).getId());
-		model.addAttribute("titulolibro", libroService.getLibroById(id).getTitulo());
-		model.addAttribute("autor", libroService.getLibroById(id).getAutor());
-		model.addAttribute("genero", libroService.getLibroById(id).getGenero());
-		model.addAttribute("cantidadejemplares", libroService.getLibroById(id).getCantidadEjemplares());
+		model.addAttribute("libro", libroService.getLibroById(id1));
+		/*
+		model.addAttribute("titulolibro", libroService.getLibroById(id1).getTitulo());
+		model.addAttribute("autor", libroService.getLibroById(id1).getAutor());
+		model.addAttribute("genero", libroService.getLibroById(id1).getGenero());
+		model.addAttribute("cantidadejemplares", libroService.getLibroById(id1).getCantidadEjemplares());
+		*/
+	}catch (Exception e) {
+		
+	}
+
 		return "libro/info-libro";
 	}
 }

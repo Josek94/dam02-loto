@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.prueba.dam02_loto.Dam02LotoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.263 s -- in com.prueba.dam02_loto.Dam02LotoApplicationTests

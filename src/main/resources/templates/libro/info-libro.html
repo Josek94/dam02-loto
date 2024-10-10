@@ -136,10 +136,10 @@
 	<h1 th:text="${titulo}"></h1>
 	<ul>
 		<li><span>ID:</span> <span th:text="${id}"></span></li>
-        <li><span>Título del Libro:</span> <span th:text="${titulolibro}"></span></li>
-        <li><span>Autor:</span> <span th:text="${autor}"></span></li>
-        <li><span>Género:</span> <span th:text="${genero}"></span></li>
-        <li><span>Cantidad de Ejemplares:</span> <span th:text="${cantidadejemplares}"></span></li>
+        <li><span>Título del Libro:</span> <span th:text="${libro.titulo}"></span></li>
+        <li><span>Autor:</span> <span th:text="${libro.autor}"></span></li>
+        <li><span>Género:</span> <span th:text="${libro.genero}"></span></li>
+        <li><span>Cantidad de Ejemplares:</span> <span th:text="${libro.cantidadEjemplares}"></span></li>
 	</ul>	
 	<a th:href="@{/home}"><button class="btn btn-primary">Volver al menu</button></a>
 </div>	
