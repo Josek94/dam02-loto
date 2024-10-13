@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}">Insert title here</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="content-container">
+	<h1 th:text="${titular}"></h1>
+	<h3 th:text="'Aciertos seguidos: ' + ${score}"></h3>
+	<img th:src="@{/img/{imagen}(imagen=${imagenRandom})}">
+	<div class="content-container">
+		<form th:action="@{/imagen}" method="get">
+			<input type="hidden" th:value="${imagenRandom}" name="imagenActual"/>
+                <button class="btn btn-primary" type="submit" name="pais" value="Grecia">Grecia</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="Alemania">Alemania</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="Rumania">Rumania</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="Suecia">Suecia</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="Finlandia">Finlandia</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="Reino Unido">Reino Unido</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="España">España</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="Malta">Malta</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="Francia">Francia</button>
+                <button class="btn btn-primary" type="submit" name="pais" value="Bulgaria">Bulgaria</button>
+		</form>
+	</div>
+</div>
+</body>
+</html>

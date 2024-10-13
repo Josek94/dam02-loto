@@ -52,4 +52,14 @@ public class LibroService {
 		Libro libroById = listaDeLibros.stream().filter(l -> l.getId() == id).findFirst().orElse(null);
 		return libroById;
 	}
+	
+	public List<Libro> getListByGenero(Genero genero){
+		return listaDeLibros.stream().filter(l -> l.getGenero() == genero).toList();
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
 }
