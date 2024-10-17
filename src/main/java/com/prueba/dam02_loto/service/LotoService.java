@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.prueba.dam02_loto.model.Loto;
 
 @Service
-public class LotoService {
+public class LotoService implements ILotoService{
 
 	private Loto loteriaAElegir;
 

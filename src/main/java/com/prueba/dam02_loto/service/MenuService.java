@@ -7,7 +7,7 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MenuService {
+public class MenuService implements IMenuService{
 	
 	
 	

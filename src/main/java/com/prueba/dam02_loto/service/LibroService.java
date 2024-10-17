@@ -9,7 +9,7 @@ import com.prueba.dam02_loto.model.Genero;
 import com.prueba.dam02_loto.model.Libro;
 
 @Service
-public class LibroService {
+public class LibroService implements ILibroService{
 	private List<Libro> listaDeLibros = generarLista();
 	
 	
@@ -59,7 +59,4 @@ public class LibroService {
 		
 	}
 	
-	public static void main(String[] args) {
-		
-	}
 }

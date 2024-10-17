@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class ImagenService {
+public class ImagenService implements IImagenService{
 
 	private List<String> listaDeImagenes = generaLista();
 	private Map<String, String> mapaDePaises = generaMapaPaises();

@@ -34,7 +34,7 @@ public class MenuController {
 				+ "Cras tempus odio sed egestas condimentum.");
 		model.addAttribute("proverbio", menuService.getProverbioRandom());
 
-		return "/home";
+		return "home";
 	}
 
 }

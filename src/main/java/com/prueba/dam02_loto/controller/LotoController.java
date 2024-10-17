@@ -18,7 +18,7 @@ public class LotoController {
 	public String menuLoto(Model model) {
 		model.addAttribute("cabecera", "¡Bienvenidos al menu de Loterias!");
 		model.addAttribute("seleciona", "Selecciona un pais: ");
-		return "/loto/menu";
+		return "loto/menu";
 	}
 	
 	@GetMapping({"/loto/genera/49/6/{pais}", "/loto/genera/59/5/{pais}", "/loto/genera/90/6/{pais}"})
@@ -29,7 +29,7 @@ public class LotoController {
 					+ lotoService.getLoteria(pais));
 		
 		
-		return "/loto/genera";
+		return "loto/genera";
 	}
 	
 }
